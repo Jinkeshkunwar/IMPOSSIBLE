@@ -1,0 +1,2 @@
+/data/user_de/0/com.android.shell/files/bugreports/bugreport-sdk_gphone_x86_64-RSR1.201211.001-2022-06-02-14-40-12.zip: 1 file pulled, 0 skipped. 55.6 MB/s (3848256 bytes in 0.066s)
+Bug report copied to C:\Users\vijgudap\Desktop\vijay_platformtools\bugreport-sdk_gphone_x86_64-RSR1.201211.001-2022-06-02-14-40-12.zip

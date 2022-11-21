@@ -1,0 +1,103 @@
+FATAL EXCEPTION
+
+I am_crash
+
+
+Fatal signal
+
+
+Fatal signal
+
+
+anr
+
+05-27 12:24:06.170  1389  1389 E Hyphenator: java.io.FileNotFoundException: /system/usr/hyphen-data/hyph-und-ethi.hyb: open failed: ENOENT (No such file or directory)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at libcore.io.IoBridge.open(IoBridge.java:455)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:247)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at android.text.Hyphenator.loadHyphenator(Hyphenator.java:118)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at android.text.Hyphenator.init(Hyphenator.java:224)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at com.android.internal.os.ZygoteInit.preloadTextResources(ZygoteInit.java:252)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at com.android.internal.os.ZygoteInit.preload(ZygoteInit.java:206)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:723)
+05-27 12:24:06.170  1389  1389 E Hyphenator: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at libcore.io.Posix.open(Native Method)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:187)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	at libcore.io.IoBridge.open(IoBridge.java:441)
+05-27 12:24:06.170  1389  1389 E Hyphenator: 	... 6 more
+
+
+
+
+ Fatal signal 4 (SIGILL), code -6 (SI_TKILL) in tid 12896 (rk.insightsdemo), pid 12896 (rk.insightsdemo)
+
+   : Build fingerprint: 'google/sdk_gphone_x86_64/generic_x86_64_arm64:11/RSR1.201211.001/7027799:user/release-keys'
+   : Revision: '0'
+   : ABI: 'x86'
+   : Timestamp: 2022-06-01 21:32:12+0530
+   : pid: 12896, tid: 12896, name: rk.insightsdemo  >>> com.tuningfork.insightsdemo <<<
+   : uid: 10154
+   : signal 4 (SIGILL), code -6 (SI_TKILL), fault addr --------
+   :     eax 00000000  ebx 00003260  ecx 00003260  edx 00000004
+   :   edi 00000004  esi 00003260
+   :   ebp ffdf6a48  esp ffdf69fc  eip f72b8b99
+ backtrace:
+      #00 pc 00000b99  [vdso] (__kernel_vsyscall+9)
+      #01 pc 000cb62c  /apex/com.android.runtime/lib/bionic/libc.so (tgkill+28) (BuildId: 57f4eb5e1df9fa8bd21032ad6be9823f)
+      #02 pc 00084474  /apex/com.android.runtime/lib/bionic/libc.so (raise+68) (BuildId: 57f4eb5e1df9fa8bd21032ad6be9823f)
+      #03 pc 00134325  /data/app/~~Q0JyoC-1cgsjF1YCSU8uzw==/com.tuningfork.insightsdemo-iUVaZ4chWZ_7ZBtVjpZNjg==/lib/x86/libnative-lib.so (Java_com_tuningfork_insightsdemo_TFTestActivity_raiseSignal+360) (BuildId: 877faafc8dc218b737cf1b4bf60d29eb38a6620e)
+      #04 pc 0014a632  /apex/com.android.art/lib/libart.so (art_quick_generic_jni_trampoline+82) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #05 pc 00143ff2  /apex/com.android.art/lib/libart.so (art_quick_invoke_static_stub+418) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #06 pc 001da4c2  /apex/com.android.art/lib/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+258) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      06-01 21:32:13.053 12991 12991 F DEBUG   :       #12 pc 00384302  /apex/com.android.art/lib/libart.so (art::interpreter::Execute(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame&, art::JValue, bool, bool) (.llvm.876822561461041939)+370) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #07 pc 0039d2c1  /apex/com.android.art/lib/libart.so (art::interpreter::ArtInterpreterToCompiledCodeBridge(art::Thread*, art::ArtMethod*, art::ShadowFrame*, unsigned short, art::JValue*)+385) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #08 pc 0039113e  /apex/com.android.art/lib/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+1038) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #09 pc 007ec399  /apex/com.android.art/lib/libart.so (MterpInvokeStatic+649) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #10 pc 0013de21  /apex/com.android.art/lib/libart.so (mterp_op_invoke_static+33) (BuildId: 5197e1b80996e1880aad0b2b7167d121)
+      #11 pc 001b5e6a  [anon:dalvik-classes.dex extracted in memory from /data/app/~~Q0JyoC-1cgsjF1YCSU8uzw==/com.tuningfork.insightsdemo-iUVaZ4chWZ_7ZBtVjpZNjg==/base.apk] (com.tuningfork.insightsdemo.TFTestActivity.OnClick_Crash+2)
+
+
+
+
+
+
+nothing all are good but salary hike is low" (in 1355 reviews)
+
+"No hike for years after you join" (in 713 reviews)
+
+
+
+
+
+Employ friendly Good work environment" (in 2916 reviews)
+
+"Good environment for the employees" (in 1293 reviews)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java.lang.IllegalStateException: Handler (android.os.Handler) {a929f35} sending message to a Handler on a dead thread
+ 	at android.os.MessageQueue.enqueueMessage(MessageQueue.java:543)
+ 	at android.os.Handler.enqueueMessage(Handler.java:643)
+ 	at android.os.Handler.sendMessageAtTime(Handler.java:612)
+ 	at android.os.Handler.sendMessageDelayed(Handler.java:582)
+ 	at android.os.Handler.post(Handler.java:338)
+ 	at nos.b(SourceFile:353)
+ 	at vch.d(SourceFile:298)
+	at vch.a(SourceFile:166)
+ 	at vff.run(SourceFile:1431)
+ 	at android.os.Handler.handleCallback(Handler.java:751)
+ 	at android.os.Handler.dispatchMessage(Handler.java:95)
+ 	at android.os.Looper.loop(Looper.java:154)
+ 	at android.os.HandlerThread.run(HandlerThread.java:61)
+ cleanUpApplicationRecord -- 2080
+ Handler (android.os.Handler) {a929f35} sending message to a Handler on a dead thread
