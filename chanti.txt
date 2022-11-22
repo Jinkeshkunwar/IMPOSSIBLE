@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 Blank
+=======
+Blank
+Blnk_1
+>>>>>>> origin/chanti_1
